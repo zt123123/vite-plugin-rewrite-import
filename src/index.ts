@@ -22,7 +22,7 @@ export default function vitePluginRewriteImport(options: Options) {
           const { n, s, e, ss } = item
           if (!n) return
           const [lib, method] = n.split('/')
-          if (libName.includes(method)) {
+          if (libName.includes(lib)) {
             magic.update(s, e, `${lib}`)
             magic.update(ss, s - 1, `import { ${method} as _${method} } from `)
           }
