@@ -1,0 +1,46 @@
+{
+  "name": "vite-plugin-rewrite-import",
+  "version": "1.0.0",
+  "description": "a vite plugin for rewriting import statement",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zt123123/vite-plugin-rewrite-import.git"
+  },
+  "keywords": [
+    "vite",
+    "import",
+    "rewriter",
+    "resolver"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "clean": true,
+    "dts": true,
+    "format": [
+      "cjs",
+      "esm"
+    ]
+  },
+  "scripts": {
+    "build": "tsup-node",
+    "build:publish": "npm run build&&npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zt123123/vite-plugin-rewrite-import/issues"
+  },
+  "homepage": "https://github.com/zt123123/vite-plugin-rewrite-import#readme",
+  "dependencies": {
+    "es-module-lexer": "^1.1.0",
+    "magic-string": "^0.27.0",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.5"
+  }
+}

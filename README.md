@@ -1,2 +1,2 @@
 # vite-plugin-rewrite-import
-a vite plugin for rewritting import statement
+a vite plugin for rewriting import statement
